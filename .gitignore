@@ -1,0 +1,81 @@
+# artifacts
+.certs/
+.api/
+.artifacts/
+deploy/k8s/db/adbs.yaml
+
+# ignore common security keys
+.key
+.crt
+.csr
+.pem
+
+# Kubernetes
+kubeconfig
+
+
+# Terraform
+**/.terraform/*
+*.plan
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Node
+node_modules
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+coverage
+/build
+
+# next.js
+.next/
+out/
+
+.env*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Java
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+
+.vscode/
