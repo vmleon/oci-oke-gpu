@@ -1,4 +1,4 @@
-# OCI Kubernetes Cluster with GPU
+# OCI Kubernetes Cluster with GPU
 
 ## Deploy Infrastructure
 
