@@ -96,14 +96,14 @@ module "oke" {
   worker_pool_mode = "node-pool"
 
   worker_pools = {
-    generic_pool_1 = {
-      size = 1,
-      shape = "VM.Standard.E5.Flex",
-      ocpus = 1,
-      memory = 32,
-      boot_volume_size = 120,
-      create = true
-    }
+    # generic_pool_1 = {
+    #   size = 1,
+    #   shape = "VM.Standard.E5.Flex",
+    #   ocpus = 1,
+    #   memory = 32,
+    #   boot_volume_size = 120,
+    #   create = true
+    # }
     gpu_pool_1 = {
       size = 1,
       shape = "VM.GPU.A10.1",

@@ -64,6 +64,47 @@ Check everything works
 kubectl cluster-info
 ```
 
+```bash
+kubectl apply -k k8s/overlays/prod
+```
+
+## Other notes
+
+Untaint GPU nodes:
+
+```bash
+kubectl taint nodes -l node.kubernetes.io/instance-type=VM.GPU.A10.1 nvidia.com/gpu:NoSchedule-
+```
+
+Running NGINX:
+
+```bash
+kubectl run nginx --image=nginx
+```
+
+```bash
+kubectl exec -it nginx -- bash
+```
+
+Then:
+
+```bash
+apt-get update && exit
+```
+
+Delete NGINX:
+
+```bash
+kubectl delete po nginx
+```
+
+Check LoadBalancer
+
+```bash
+echo $(kubectl get service \
+  -o jsonpath='{.items[?(@.spec.type=="LoadBalancer")].status.loadBalancer.ingress[0].ip}')
+```
+
 ## Clean up
 
 Delete application
